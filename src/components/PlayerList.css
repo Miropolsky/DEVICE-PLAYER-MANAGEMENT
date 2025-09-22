@@ -1,0 +1,80 @@
+.player-card-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInUp 0.6s ease-out forwards;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pinpad-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.pinpad-button {
+  aspect-ratio: 1;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid #dee2e6;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.pinpad-button:hover {
+  background: #f8f9fa;
+  border-color: #007bff;
+  transform: scale(1.05);
+}
+
+.pinpad-button:active {
+  transform: scale(0.95);
+}
+
+.pinpad-button.wide {
+  grid-column: span 2;
+}
+
+.pinpad-button.operation {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.pinpad-button.operation:hover {
+  background: #218838;
+  border-color: #1e7e34;
+}
+
+.pinpad-button.operation.warning {
+  background: #ffc107;
+  color: #212529;
+  border-color: #ffc107;
+}
+
+.pinpad-button.operation.warning:hover {
+  background: #e0a800;
+  border-color: #d39e00;
+}
+
+.pinpad-button.clear {
+  background: #dc3545;
+  color: white;
+  border-color: #dc3545;
+}
+
+.pinpad-button.clear:hover {
+  background: #c82333;
+  border-color: #bd2130;
+}
